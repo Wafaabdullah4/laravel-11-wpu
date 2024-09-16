@@ -6,11 +6,14 @@ use Illuminate\Support\Facades\Route;
 use Carbon\Carbon;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Home Page']);
 });
 
 Route::get('/about', function(){
-    return view('about', ['nama' => 'Wafa Abdullah Nurbani Adam']);
+    return view('about', [
+        'nama' => 'Wafa Abdullah Nurbani Adam',
+        'title' => 'About'
+    ]);
 });
 
 
@@ -27,13 +30,15 @@ Route::get('/about', function(){
 Route::get('/blog', function(){
     return view('blog', [
         'penulis' => 'Wafa Abullah Nurbani Adam',
-        'tanggal' => Carbon::now()->toDateString()
+        'tanggal' => Carbon::now()->toDateString(),
+        'title' => 'Blog'
     ]);
 });
 
 // untuk contact
 Route::get('/contact', function(){
     return view('contact', [
-        'nama' => 'Wafa Abdullah Nurbani Adam'
+        'nama' => 'Wafa Abdullah Nurbani Adam',
+        'title' => 'Contact'
     ]);
 });

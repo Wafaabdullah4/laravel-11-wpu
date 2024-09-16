@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Halaman contact</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">blog</a>
-    <a href="/contact">contact</a>
-    <h1>Contact Me</h1>
-    <h3>Owner : {{ $nama }}</h3>
-    <div class="img-social">
-        <a href="https://www.instagram.com/bany_dam/">
-            <img src="img/instagram.png" alt="">
-        </a>
-        <a href="https://www.linkedin.com/in/wafa-abdullah-nurbani-adam-a39283327/">
-            <img src="img/linkedin.png" alt="">
-        </a>
-        <a href="https://www.gmail.com/wafa.abdullahnurbani@gmail.com">
-            <img src="img/gmail.png" alt="">
-        </a>
-    </div>
-</body>
-</html>
+<x-layout>
+    <x-slot:title>{{ $title }}</x-slot:title>
+    <p>welcome to contact !</p>
+</x-layout>
